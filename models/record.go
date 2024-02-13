@@ -931,7 +931,7 @@ func (m *Record) SetPassword(password string) error {
 	}
 
 	// hash the password
-	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(password), 12)
+	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(password), 10)
 	if err != nil {
 		return err
 	}
